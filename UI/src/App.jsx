@@ -1,10 +1,13 @@
 import React from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <>
-      <h2>Hello</h2>
-    </>
+    <div className='h-screen w-full bg-gray-300'>
+      <Header />
+      <Footer />
+    </div>
   )
 }
 
