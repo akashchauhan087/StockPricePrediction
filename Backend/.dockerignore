@@ -1,0 +1,6 @@
+Dockerfile
+docker-comopose.yml
+.env
+.gitignore
+db.sqlite3
+
