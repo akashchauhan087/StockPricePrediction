@@ -10,7 +10,7 @@ on:
     inputs:
       message:
         description: 'Message to commit'
-        required: false
+        required: true
         default: 'Deploy backend'
 
 jobs:
