@@ -1,20 +1,17 @@
 import React from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Main from './components/Main'
+import Register from './components/Register'
+import Login from './components/Login'
 
 const App = () => {
   return (
     <div className='min-h-screen w-full bg-gray-300 flex flex-col'>
       <Header />
-      <main className='flex-1 px-4 py-6'>
-        <section className='max-w-4xl mx-auto rounded-xl border border-gray-400/40 bg-white/50 p-6'>
-          <h2 className='text-2xl font-semibold'>Welcome</h2>
-          <p className='mt-2 text-gray-700'>
-            Analyze market trends and estimate future stock prices with
-            machine-learning based predictions.
-          </p>
-        </section>
-      </main>
+      <Main />
+      <Register />
+      <Login />
       <Footer />
     </div>
   )
