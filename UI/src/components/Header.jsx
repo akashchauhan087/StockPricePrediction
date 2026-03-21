@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 
 const Header = () => {
   return (
@@ -21,12 +22,8 @@ const Header = () => {
         </nav>
 
         <div className='flex items-center gap-2'>
-          <button className='rounded-lg border border-gray-400/60 px-4 py-1.5 text-sm font-medium text-gray-800 transition hover:bg-gray-100'>
-            Login
-          </button>
-          <button className='rounded-lg bg-gray-900 px-4 py-1.5 text-sm font-medium text-white transition hover:bg-gray-800'>
-            Register
-          </button>
+          <Button class='rounded-lg border border-gray-400/60 px-4 py-1.5 text-sm font-medium text-gray-800 transition hover:bg-gray-100' text='Login' />
+          <Button class='rounded-lg bg-gray-900 px-4 py-1.5 text-sm font-medium text-white transition hover:bg-gray-800' text='Register'/>
         </div>
       </div>
     </header>
