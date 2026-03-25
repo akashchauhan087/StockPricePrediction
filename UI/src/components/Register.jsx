@@ -10,7 +10,7 @@ const Register = () => {
 
   const handleRegistration = async(e) => {
     e.preventDefault();
-    const userData = {username, email, password}    
+    const userData = {username, email, password}
     try {
       const response = await axios.post('http://127.0.0.1:8003/api/v1/register/', userData)
       setSuccess(true)
@@ -20,14 +20,12 @@ const Register = () => {
       setErrors({})
     } catch (error) {
       setErrors(error.response.data)
-      console.error('Error registering user:', error)
     }
-
   }
 
   return (
-    <div className="py-10 flex items-center justify-center bg-gradient-to-br from-green-500 via-green-100 to-green-500 ">
-      <form 
+    <div className="py-10 flex items-center justify-center bg-linear-to-br from-green-500 via-green-100 to-green-500 ">
+      <form
         className="w-full max-w-md py-8 px-6 bg-white rounded-3xl shadow-2xl flex flex-col gap-6 border border-green-200 animate-fade-in"
         onSubmit={handleRegistration}
       >
@@ -73,7 +71,7 @@ const Register = () => {
         {success && <p className="text-green-500 text-sm">Registration Completed!!!</p>}
         <button
           type="submit"
-          className="mt-2 bg-gradient-to-r from-green-400 to-green-600 text-white font-bold py-2 px-8 rounded-xl shadow hover:from-green-500 hover:to-green-700 transition-all duration-200 text-lg"
+          className="mt-2 bg-linear-to-r from-green-400 to-green-600 text-white font-bold py-2 px-8 rounded-xl shadow hover:from-green-500 hover:to-green-700 transition-all duration-200 text-lg"
         >
           Register
         </button>
