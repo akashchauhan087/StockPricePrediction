@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios'
+import {AuthContext} from '../AuthProvider'
 
 const Login = () => {
   const [username, setUsername] = useState('')
@@ -8,6 +9,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const navigate = useNavigate()
+  const {isLoggedIn, setIsLoggedIn} = useContext(AuthContext)
 
   const handleLogin = async(e) => {
     e.preventDefault();
@@ -18,9 +20,11 @@ const Login = () => {
       if (response){
         localStorage.setItem('refreshToken', response.data.refresh)
         localStorage.setItem('accessToken', response.data.access)
+        setIsLoggedIn(true)
         navigate('/')
       }
     } catch (error) {
+      console.log(error);
       setError(error.response.data.detail)
     } finally {
       setUsername('')
