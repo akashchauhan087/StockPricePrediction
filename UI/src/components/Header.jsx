@@ -32,7 +32,10 @@ const Header = () => {
 
         <div className='flex items-center gap-2'>
           {isLoggedIn ? (
+            <>
+              <Button class='flex bottom-auto rounded-lg bg-green-600 px-4 py-1.5 text-sm font-medium text-white transition hover:bg-green-500' text='Explore' url='/explore' />
               <button className='rounded-lg border border-gray-400/60 px-4 py-1.5 text-sm font-medium text-gray-800 transition hover:bg-gray-100' onClick={handleLogout}>Logout</button>
+            </>
           ) : (
             <>
               <Button class='rounded-lg border border-gray-400/60 px-4 py-1.5 text-sm font-medium text-gray-800 transition hover:bg-gray-100' text='Login' url='/login' />
