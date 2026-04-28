@@ -6,6 +6,7 @@ import Register from './components/Register'
 import Login from './components/Login'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import AuthProvider from './AuthProvider'
+import Explore from './components/Explore'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path='/' element={<Main />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/explore' element={<Explore />} />
           </Routes>
           <Footer />
         </div>
