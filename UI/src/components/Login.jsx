@@ -25,7 +25,14 @@ const Login = () => {
       }
     } catch (error) {
       console.log(error);
-      setError(error.response.data.detail)
+      if (error.response?.data?.detail != null) {
+        const d = error.response.data.detail;
+        setError(typeof d === 'string' ? d : JSON.stringify(d));
+      } else if (!error.response) {
+        setError('Cannot reach server. Check API URL and CORS.');
+      } else {
+        setError(error.message || 'Login failed');
+      }
     } finally {
       setUsername('')
       setPassword('')
