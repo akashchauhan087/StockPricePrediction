@@ -36,7 +36,7 @@ const Explore = () => {
   return (
     <>
       <div className='flex-1 px-4 py-6'>
-        <div className='text-2xl font-semibold'>Welcome, {userName}!</div>
+        <div className='text-2xl font-semibold'>Welcome, {userName.toUpperCase()}!</div>
         <div className='text-lg'>{userMessage}</div>
       </div>
     </>
